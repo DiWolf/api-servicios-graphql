@@ -1,0 +1,25 @@
+type Query {
+  obtenerProveedores: [Proveedor]
+  obtenerProveedor(id: ID): Proveedor
+}
+
+type Mutation {
+  addProveedor(proveedor: ProveedorInput): String
+  updateProveedor(proveedor: ProveedorInput): String
+  deleteProveedor(id: ID): String
+}
+type Proveedor {
+  id: ID
+  nombreProveedor: String
+  representante: String
+  telefono: String
+  email: String
+}
+
+input ProveedorInput {
+  nombreProveedor: String
+  representante: String
+  telefono: String
+  email: String
+  id: ID
+}
